@@ -1,0 +1,322 @@
+/* === PEDAGOGY PAGE === */
+
+.page-header {
+  position: relative;
+  padding: 80px 0 56px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top right, var(--sauge-50), transparent 60%),
+    var(--bg);
+}
+.page-header-blob {
+  position: absolute;
+  border-radius: var(--radius-blob);
+  z-index: 0;
+  pointer-events: none;
+}
+.page-header-blob-1 { top: -40px; right: 8%; width: 220px; height: 220px; background: var(--rose-100); opacity: 0.55; }
+.page-header-blob-2 { bottom: -40px; left: -40px; width: 200px; height: 200px; background: var(--bleu-100); opacity: 0.5; }
+.page-header > .container { position: relative; z-index: 1; max-width: 880px; }
+.page-header h1 { margin: 14px 0 24px; }
+.page-header .eyebrow { display: inline-block; }
+
+/* SECTION HEADS */
+.section-head { margin-bottom: 56px; max-width: 720px; }
+.section-head.text-center { margin: 0 auto 56px; }
+.section-head .eyebrow { display: inline-block; margin-bottom: 16px; }
+.section-head .lede { margin-top: 16px; }
+.section-head.text-center .lede { margin: 16px auto 0; }
+
+/* PROMESSES */
+.promesses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 881px) { .promesses-grid { grid-template-columns: 1fr 1fr; } }
+.promesse {
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  border: 1px solid var(--ink-100);
+  position: relative;
+  overflow: hidden;
+}
+.promesse-rose { background: var(--rose-50); }
+.promesse-bleu { background: var(--bleu-50); }
+.promesse-illu {
+  width: 80px; height: 80px;
+  margin-bottom: 24px;
+  display: inline-flex;
+}
+.promesse h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.promesse p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-700);
+}
+
+/* ORIENTATIONS */
+.orientations-section { background: var(--creme-100); }
+.orientations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.orientation {
+  display: grid;
+  /* Mobile : 2 colonnes (numéro + contenu), illustration cachée. */
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.25s;
+}
+.orientation:hover {
+  transform: translateX(4px);
+  border-color: var(--rose-200);
+}
+.orientation-number {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--rose-300);
+  line-height: 1;
+}
+.orientation-content h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.orientation-content p {
+  font-size: 15px;
+  color: var(--ink-700);
+  line-height: 1.6;
+  max-width: 64ch;
+}
+.orientation-illu {
+  display: none;
+  width: 80px; height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.orientation-illu .illu { width: 100%; height: 100%; display: inline-block; }
+
+@media (min-width: 721px) {
+  .orientation {
+    grid-template-columns: 80px 1fr 100px;
+    gap: 32px;
+    padding: 32px 40px;
+  }
+  .orientation-number { font-size: 56px; }
+  .orientation-illu { display: flex; }
+}
+
+/* JOURNÉE — cards layout */
+.journee-section-projet { scroll-margin-top: 80px; }
+.moments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 561px) { .moments-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 881px) { .moments-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.moment {
+  padding: 28px 26px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-100);
+  background: var(--surface);
+  transition: all 0.2s;
+}
+.moment:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.moment-1 { background: var(--rose-50);  border-color: var(--rose-100); }
+.moment-2 { background: var(--jaune-50); border-color: var(--jaune-100); }
+.moment-3 { background: var(--sauge-50); border-color: var(--sauge-100); }
+.moment-4 { background: var(--bleu-50);  border-color: var(--bleu-100); }
+.moment-5 { background: var(--rose-50);  border-color: var(--rose-100); }
+.moment-6 { background: var(--jaune-50); border-color: var(--jaune-100); }
+
+.moment-time {
+  font-family: 'DM Mono', monospace, var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink-500);
+  display: block;
+  margin-bottom: 12px;
+}
+.moment h4 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.moment p { font-size: 14px; color: var(--ink-700); line-height: 1.55; }
+
+/* ÉQUIPE */
+.equipe-section { scroll-margin-top: 80px; }
+.equipe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (min-width: 881px) {
+  .equipe-grid { grid-template-columns: 1fr 1.2fr; gap: 64px; }
+}
+
+.equipe-visual {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  background: var(--sauge-50);
+  overflow: hidden;
+}
+.equipe-blob {
+  position: absolute;
+  width: 70%; height: 70%;
+  top: 15%; left: 15%;
+  border-radius: var(--radius-blob);
+  background: var(--sauge-100);
+}
+.equipe-illu { position: absolute; }
+.equipe-illu-1 { width: 40%; bottom: 10%; left: 28%; }
+.equipe-illu-2 { width: 100px; top: 12%; right: 16%; }
+.equipe-illu-3 { width: 90px; top: 18%; left: 12%; }
+.equipe-illu-4 { width: 110px; bottom: 14%; right: 8%; }
+
+.equipe-stats {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 24px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-100);
+}
+.equipe-stats > * { min-width: 0; }
+.equipe-stats > div { text-align: center; }
+.equipe-stats strong {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--rose-500);
+  display: block;
+  line-height: 1;
+}
+.equipe-stats span {
+  font-size: 12px;
+  color: var(--ink-500);
+  font-weight: 600;
+  margin-top: 6px;
+  display: block;
+}
+
+/* BIEN-ÊTRE */
+.bien-etre-section { background: var(--rose-50); }
+.bien-etre-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 881px) { .bien-etre-grid { grid-template-columns: repeat(3, 1fr); } }
+.bien-etre-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--ink-100);
+}
+.bien-etre-icon {
+  width: 56px; height: 56px;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+.bien-etre-card h4 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.bien-etre-card p {
+  font-size: 14.5px;
+  color: var(--ink-700);
+  line-height: 1.6;
+}
+
+/* POURQUOI */
+.pourquoi-section { background: var(--creme-100); }
+.pourquoi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 881px) { .pourquoi-grid { grid-template-columns: 1fr 1.4fr; gap: 64px; } }
+.pourquoi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.pourquoi-list li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--ink-100);
+}
+.pourquoi-list li:first-child { padding-top: 0; }
+.pourquoi-list li:last-child { border-bottom: none; }
+.pourquoi-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--rose-400);
+  line-height: 1;
+}
+.pourquoi-list strong {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+.pourquoi-list p {
+  font-size: 14.5px;
+  color: var(--ink-700);
+  margin: 0;
+}
+
+/* CTA */
+.cta-section { padding: 0 0 96px; }
+.projet-cta {
+  background: linear-gradient(135deg, var(--ink-900), var(--ink-800));
+  border-radius: var(--radius-xl);
+  padding: 80px 32px;
+  text-align: center;
+}
+.projet-cta .eyebrow { color: var(--rose-400); }
+.projet-cta h2 {
+  color: var(--creme-50);
+  margin: 14px 0 0;
+}
+.projet-cta .lede {
+  color: var(--ink-200);
+  max-width: 520px;
+  margin: 16px auto 32px;
+}
+.projet-cta .btn-primary {
+  background: var(--rose-400);
+  color: var(--ink-900);
+}
+.projet-cta .btn-primary:hover {
+  background: var(--rose-300);
+}

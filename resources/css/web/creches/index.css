@@ -1,0 +1,230 @@
+/* === CRECHES PAGE === */
+
+.page-header {
+  position: relative;
+  padding: 80px 0 56px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top right, var(--rose-50), transparent 60%),
+    var(--bg);
+}
+.page-header-blob {
+  position: absolute;
+  border-radius: var(--radius-blob);
+  z-index: 0;
+  pointer-events: none;
+}
+.page-header-blob-1 { top: -40px; right: 8%; width: 220px; height: 220px; background: var(--jaune-100); opacity: 0.55; }
+.page-header-blob-2 { bottom: -40px; left: -40px; width: 200px; height: 200px; background: var(--bleu-100); opacity: 0.6; }
+.page-header > .container { position: relative; z-index: 1; max-width: 880px; }
+.page-header h1 { margin: 14px 0 24px; }
+.page-header .lede { margin-bottom: 32px; }
+.page-header .eyebrow { display: inline-block; }
+
+.quick-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.quick-nav a {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1.5px solid var(--ink-200);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-700);
+  transition: all 0.2s;
+}
+.quick-nav a:hover {
+  border-color: var(--rose-400);
+  color: var(--rose-500);
+  background: var(--rose-50);
+}
+
+/* SECTION HEADS (réutilisable) */
+.section-head { margin-bottom: 56px; max-width: 720px; }
+.section-head.text-center { margin: 0 auto 56px; }
+.section-head .eyebrow { display: inline-block; margin-bottom: 16px; }
+.section-head .lede { margin-top: 16px; }
+.section-head.text-center .lede { margin: 16px auto 0; }
+
+/* STRUCTURE DETAIL */
+.structure-detail {
+  padding: 80px 0;
+  scroll-margin-top: 80px;
+}
+.structure-detail-alt { background: var(--creme-100); }
+
+.structure-detail-grid,
+.structure-detail-grid-rev {
+  display: grid;
+  /* Mobile : une colonne, gap réduit. Le visuel des sections « reverse »
+     passe en première position via order: -1 pour respecter le sens visuel. */
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.structure-detail-grid-rev .structure-visual { order: -1; }
+
+@media (min-width: 881px) {
+  .structure-detail-grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+  }
+  .structure-detail-grid-rev {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+  }
+  .structure-detail-grid-rev .structure-visual { order: 0; }
+}
+
+/* VISUAL */
+.structure-visual {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.structure-visual-rose  { background: var(--rose-50); }
+.structure-visual-jaune { background: var(--jaune-50); }
+.structure-visual-bleu  { background: var(--bleu-50); }
+
+.structure-visual-blob {
+  position: absolute;
+  width: 70%; height: 70%;
+  border-radius: var(--radius-blob);
+  top: 15%; left: 15%;
+}
+.structure-visual-rose .structure-visual-blob  { background: var(--rose-100); }
+.structure-visual-jaune .structure-visual-blob { background: var(--jaune-100); }
+.structure-visual-bleu .structure-visual-blob  { background: var(--bleu-100); }
+
+.structure-visual-illu { position: absolute; }
+.structure-visual-main { width: 50%; left: 25%; top: 25%; z-index: 2; }
+.structure-visual-sm { width: 80px; height: 80px; z-index: 1; }
+.structure-visual-1 { top: 12%; right: 12%; }
+.structure-visual-2 { bottom: 16%; left: 14%; }
+.structure-visual-3 { bottom: 18%; right: 16%; width: 60px; height: 60px; }
+
+.structure-badge {
+  position: absolute;
+  bottom: 24px; right: 24px;
+  background: var(--surface);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--ink-100);
+  font-size: 13px;
+  color: var(--ink-700);
+  z-index: 3;
+  box-shadow: var(--shadow-sm);
+}
+.structure-badge strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--rose-500);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+/* INFO */
+.structure-info h2 { margin: 14px 0 20px; font-size: clamp(36px, 4vw, 48px); }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--ink-100);
+}
+.info-grid > * { min-width: 0; }
+@media (min-width: 481px) {
+  .info-grid { grid-template-columns: 1fr 1fr; }
+}
+.info-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 6px;
+}
+.info-grid strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.info-grid .info-sub {
+  font-size: 13px;
+  color: var(--ink-500);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--ink-700);
+}
+.feature-list .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.dot-rose  { background: var(--rose-400); }
+.dot-jaune { background: var(--jaune-400); }
+.dot-bleu  { background: var(--bleu-400); }
+
+/* COMMUN */
+.commun-section { background: var(--rose-50); }
+.commun-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 481px) { .commun-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 881px) { .commun-grid { grid-template-columns: repeat(4, 1fr); } }
+.commun-item {
+  background: var(--surface);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-100);
+  text-align: left;
+}
+.commun-item .commun-icon { width: 48px; height: 48px; display: inline-flex; margin-bottom: 16px; }
+.commun-item strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+  display: block;
+  margin-bottom: 8px;
+}
+.commun-item p { font-size: 14px; color: var(--ink-700); line-height: 1.55; }
+
+.commun-cta {
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-xl);
+  padding: 56px 32px;
+  text-align: center;
+}
+.commun-cta h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}

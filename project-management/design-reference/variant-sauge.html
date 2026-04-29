@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Variante Sauge</title>
+<link rel="stylesheet" href="assets/design-system.css">
+<link rel="stylesheet" href="assets/home.css">
+<script src="assets/illustrations.js" defer></script>
+<style>
+  /* Override palette → vert sauge dominant */
+  :root {
+    --rose-50: #f0f5f0;
+    --rose-100: #d8e6da;
+    --rose-200: #b3cdb7;
+    --rose-300: #88aa8d;
+    --rose-400: #6a8e6f;
+    --rose-500: #57845d;
+    --rose-600: #426849;
+    --rose-700: #34543b;
+    --bg: #faf6ec;
+    --creme-100: #f4eee0;
+    --jaune-100: #f0e7c4;
+  }
+  body { background: var(--bg); }
+  .hero { background:
+    radial-gradient(ellipse at top right, var(--rose-50), transparent 60%),
+    radial-gradient(ellipse at bottom left, var(--bleu-50), transparent 50%),
+    var(--bg); }
+  .hero-card { background:
+    radial-gradient(circle at 30% 80%, var(--rose-50), transparent 60%),
+    radial-gradient(circle at 80% 20%, #e8e0c4, transparent 60%),
+    var(--surface); }
+  .hero-blob-1 { background: var(--rose-100); }
+  .hero-blob-2 { background: #f0e7c4; }
+  .hero-blob-3 { background: var(--rose-200); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#" class="nav-logo">
+        <span style="width:44px;height:44px;display:inline-flex;" data-illu="logo"></span>
+        <span>Eco Santé <em style="font-style:italic;font-weight:400;color:var(--rose-500);">Développement</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="#" class="active">Accueil</a>
+        <a href="#">Nos crèches</a>
+        <a href="#">Projet pédagogique</a>
+        <a href="#">Contact</a>
+        <a href="#" class="btn btn-primary" style="padding:12px 22px;">Inscription</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Bienvenue chez Eco Santé Développement</span>
+      <h1>Un lieu pensé<br><em class="italic-accent">pour vos tout-petits</em>,<br>à taille humaine.</h1>
+      <p class="lede mb-6">Nos trois micro-crèches privées accueillent vos enfants dans un environnement chaleureux, sécurisé et adapté à leurs premiers apprentissages — pour grandir en confiance, à leur rythme.</p>
+      <div class="flex gap-3" style="flex-wrap:wrap;">
+        <a href="#" class="btn btn-primary">Découvrir nos crèches →</a>
+        <a href="#" class="btn btn-secondary">Demander une visite</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>3</strong><span>structures</span></div>
+        <div class="hero-stat-divider"></div>
+        <div><strong>32</strong><span>enfants accueillis</span></div>
+        <div class="hero-stat-divider"></div>
+        <div><strong>100%</strong><span>repas bio sur place</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hero-card-main">
+        <div class="hero-illu hero-illu-house" data-illu="maison"></div>
+        <div class="hero-illu hero-illu-sun" data-illu="soleil"></div>
+        <div class="hero-illu hero-illu-cloud" data-illu="nuage"></div>
+        <div class="hero-illu hero-illu-flower" data-illu="feuille"></div>
+        <div class="hero-illu hero-illu-leaf" data-illu="feuille"></div>
+        <div class="hero-illu hero-illu-butterfly" data-illu="papillon"></div>
+      </div>
+      <div class="hero-badge">
+        <span data-illu="coeur" style="width:32px;height:32px;display:inline-flex;"></span>
+        <div><strong>Agréées PMI</strong><span>Val d'Oise &amp; Savoie</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

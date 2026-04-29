@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variations visuelles — Eco Santé Développement</title>
+<link rel="stylesheet" href="assets/design-system.css">
+<script src="assets/illustrations.js" defer></script>
+<style>
+  body { background: #efe9dc; padding: 40px 24px 80px; }
+  .canvas-head { max-width: 1240px; margin: 0 auto 32px; }
+  .canvas-head h1 { font-size: 36px; margin-bottom: 8px; }
+  .canvas-head p { color: var(--ink-700); max-width: 60ch; }
+
+  .variants {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .variant-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .variant-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .variant-num {
+    width: 36px; height: 36px;
+    background: var(--ink-900);
+    color: var(--creme-50);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+  .variant-name {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .variant-tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--ink-200);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-700);
+  }
+  .variant-frame {
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--bg);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+  }
+  .variant-frame iframe {
+    width: 100%;
+    height: 720px;
+    border: 0;
+    display: block;
+  }
+
+  /* === V2 — Crème pleine + accent vert sauge dominant === */
+  .v2-body {
+    --bg: #f4eee0;
+    --rose-500: #6a8e6f;
+    --rose-400: #88aa8d;
+    --rose-300: #b3cdb7;
+    --rose-100: #d8e6da;
+    --rose-50: #ebf2ec;
+  }
+
+  /* === V3 — Sombre, contraste fort, illustrations en cercles === */
+  .v3-body {
+    --bg: #1d1816;
+    --surface: #2a2421;
+    --ink-900: #fefcf7;
+    --ink-700: #d8cfc4;
+    --ink-500: #a89c8e;
+    --ink-200: #4a423d;
+    --ink-100: #3a322d;
+    --rose-500: #f0a08e;
+    --creme-100: #2a2421;
+  }
+
+  @media (max-width: 720px) {
+    .variant-frame iframe { height: 600px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="canvas-head">
+  <span class="eyebrow">Trois directions visuelles</span>
+  <h1>Comparez et choisissez<br><em class="italic-accent">la direction qui vous parle.</em></h1>
+  <p class="lede">
+    Trois variantes du hero de la page d'accueil. Même contenu, trois ambiances —
+    rose &amp; pastel (la version actuelle du site), vert sauge naturel, ou nuit chaleureuse contrastée.
+    Cliquez sur la version que vous préférez et nous l'appliquerons à toutes les pages.
+  </p>
+</div>
+
+<div class="variants">
+
+  <!-- V1 - Pastel rose (actuelle) -->
+  <section class="variant-section">
+    <div class="variant-label">
+      <span class="variant-num">1</span>
+      <span class="variant-name">Pastel rose &amp; ciel</span>
+      <span class="variant-tag">Doux · Solaire · Familial</span>
+      <span class="variant-tag" style="background:var(--rose-100);color:var(--rose-700);border-color:transparent;">Direction actuelle</span>
+    </div>
+    <div class="variant-frame">
+      <iframe src="index.html#hero" title="Variante 1"></iframe>
+    </div>
+  </section>
+
+  <!-- V2 - Sauge naturel -->
+  <section class="variant-section">
+    <div class="variant-label">
+      <span class="variant-num">2</span>
+      <span class="variant-name">Sauge &amp; nature</span>
+      <span class="variant-tag">Bio · Calme · Éco-responsable</span>
+    </div>
+    <div class="variant-frame">
+      <iframe src="variant-sauge.html" title="Variante 2"></iframe>
+    </div>
+  </section>
+
+  <!-- V3 - Sombre contrasté -->
+  <section class="variant-section">
+    <div class="variant-label">
+      <span class="variant-num">3</span>
+      <span class="variant-name">Nuit chaleureuse</span>
+      <span class="variant-tag">Premium · Contrasté · Audacieux</span>
+    </div>
+    <div class="variant-frame">
+      <iframe src="variant-nuit.html" title="Variante 3"></iframe>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

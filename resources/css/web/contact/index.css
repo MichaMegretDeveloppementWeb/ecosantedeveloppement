@@ -1,0 +1,326 @@
+/* === CONTACT PAGE === */
+
+.page-header {
+  position: relative;
+  padding: 80px 0 56px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top right, var(--bleu-50), transparent 60%),
+    var(--bg);
+}
+.page-header-blob {
+  position: absolute;
+  border-radius: var(--radius-blob);
+  z-index: 0;
+}
+.page-header-blob-1 { top: -40px; right: 8%; width: 220px; height: 220px; background: var(--rose-100); opacity: 0.55; }
+.page-header-blob-2 { bottom: -40px; left: -40px; width: 200px; height: 200px; background: var(--jaune-100); opacity: 0.55; }
+.page-header > .container { position: relative; z-index: 1; max-width: 880px; }
+.page-header h1 { margin: 14px 0 24px; }
+.page-header .eyebrow { display: inline-block; }
+
+.contact-section { padding: 32px 0 80px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: static;
+}
+
+/* À partir de 1081px, sidebar fixe 360px à gauche et sticky au scroll. */
+@media (min-width: 1081px) {
+  .contact-grid {
+    grid-template-columns: 360px 1fr;
+    gap: 48px;
+  }
+  .contact-side {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+.contact-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-100);
+  padding: 28px;
+}
+.contact-card h3 {
+  font-size: 22px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.contact-card h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.coord-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; }
+.coord-list li { display: flex; gap: 14px; align-items: flex-start; }
+.coord-list .muted { font-size: 12px; display: block; margin-bottom: 4px; }
+.coord-list strong {
+  font-size: 14px;
+  line-height: 1.4;
+  /* Mobile XS : autorise le wrap pour ne pas overflow de la card.
+     À partir de 381px, force 1 ligne (le mail rentre dans la sidebar). */
+  white-space: normal;
+  word-break: break-word;
+}
+.coord-list a { display: inline-block; padding: 8px 0; }
+.coord-list a:hover strong { color: var(--rose-500); }
+@media (min-width: 381px) {
+  .coord-list strong { white-space: nowrap; word-break: normal; }
+}
+.coord-icon {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.coord-icon-rose  { background: var(--rose-50);  color: var(--rose-600); }
+.coord-icon-bleu  { background: var(--bleu-50);  color: var(--bleu-600); }
+.coord-icon-jaune { background: var(--jaune-50); color: var(--jaune-600); }
+
+.download-card {
+  background: var(--rose-50);
+  border-color: var(--rose-100);
+}
+.download-card .download-icon { width: 64px; height: 64px; display: inline-flex; margin-bottom: 14px; }
+.download-card h3 { margin-bottom: 6px; }
+.download-card p { font-size: 14px; color: var(--ink-700); line-height: 1.55; }
+
+.mini-creches .mini-c {
+  font-size: 14px;
+  margin-bottom: 14px;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.4;
+}
+.mini-creches .mini-c:last-child { margin-bottom: 0; }
+.mini-creches .dot {
+  position: absolute;
+  left: 0; top: 8px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+.dot-rose  { background: var(--rose-400); }
+.dot-jaune { background: var(--jaune-400); }
+.dot-bleu  { background: var(--bleu-400); }
+
+/* FORM */
+.contact-form {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--ink-100);
+  padding: 32px 24px;
+}
+@media (min-width: 721px) { .contact-form { padding: 48px; } }
+.contact-form h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.required { color: var(--rose-500); font-weight: 700; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.form-grid > * { min-width: 0; }
+@media (min-width: 561px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+
+.radio-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 561px) { .radio-group { grid-template-columns: 1fr 1fr; } }
+.radio-card {
+  position: relative;
+  cursor: pointer;
+}
+.radio-card input { position: absolute; opacity: 0; }
+.radio-card .radio-content {
+  display: block;
+  padding: 16px 18px;
+  border: 1.5px solid var(--ink-200);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: all 0.2s;
+  position: relative;
+  padding-left: 38px;
+}
+.radio-card .radio-content .dot {
+  position: absolute;
+  left: 16px; top: 22px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.radio-card .radio-content strong {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 2px;
+}
+.radio-card .radio-content small {
+  font-size: 12px;
+  color: var(--ink-500);
+}
+.radio-card input:checked + .radio-content {
+  border-color: var(--rose-400);
+  background: var(--rose-50);
+  box-shadow: 0 0 0 4px var(--rose-50);
+}
+.radio-card:hover .radio-content { border-color: var(--ink-300); }
+
+/* UPLOAD */
+.upload-zone {
+  border: 2px dashed var(--ink-200);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  background: var(--creme-100);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.upload-zone:hover, .upload-zone.drag {
+  border-color: var(--rose-400);
+  background: var(--rose-50);
+}
+.upload-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-500);
+}
+.upload-empty svg { color: var(--rose-400); }
+.upload-empty strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.upload-empty small { font-size: 12px; }
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--rose-500);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.upload-filled {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 8px;
+}
+.file-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--rose-100);
+  color: var(--rose-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-info { flex: 1; min-width: 0; }
+.file-info strong { display: block; font-size: 14px; word-break: break-all; }
+.file-info small { font-size: 12px; color: var(--ink-500); }
+.remove-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--ink-100);
+  color: var(--ink-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.remove-btn:hover { background: var(--rose-100); color: var(--rose-600); }
+
+/* SELECT (date d'entrée) — design custom avec flèche SVG inline rose. */
+.select-month {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d97058' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 14px;
+  padding-right: 48px;
+  cursor: pointer;
+}
+.select-month option[value=""] {
+  color: var(--ink-500);
+}
+.select-month option {
+  color: var(--ink-900);
+}
+
+/* CHECKBOX */
+.field-checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.field-checkbox input {
+  margin-top: 4px;
+  width: 18px; height: 18px;
+  accent-color: var(--rose-500);
+}
+.field-checkbox label {
+  font-size: 13.5px;
+  color: var(--ink-700);
+  line-height: 1.55;
+  cursor: pointer;
+}
+.field-checkbox a { color: var(--rose-500); text-decoration: underline; }
+
+.form-success {
+  background: var(--sauge-50);
+  border: 1px solid var(--sauge-200);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+}
+.form-success .success-icon { display: inline-flex; margin-bottom: 16px; width: 48px; height: 48px; }
+.form-success strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+.form-success p { font-size: 15px; color: var(--ink-700); max-width: 40ch; margin: 0 auto; }
+
+.field-error {
+  font-size: 13px;
+  color: var(--rose-600);
+  margin-top: 4px;
+}
+.input-error {
+  border-color: var(--rose-400) !important;
+}
+
+.submit-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+}

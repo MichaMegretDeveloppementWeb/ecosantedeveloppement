@@ -1,0 +1,95 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-CcgiySv9.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/components/layout/footer.css": {
+    "file": "assets/footer-DfZJA-QU.css",
+    "name": "footer",
+    "names": [
+      "footer.css"
+    ],
+    "src": "resources/css/components/layout/footer.css",
+    "isEntry": true
+  },
+  "resources/css/components/layout/header.css": {
+    "file": "assets/header-DmTb4i0E.css",
+    "name": "header",
+    "names": [
+      "header.css"
+    ],
+    "src": "resources/css/components/layout/header.css",
+    "isEntry": true
+  },
+  "resources/css/errors/index.css": {
+    "file": "assets/index-DWSaKCMF.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/errors/index.css",
+    "isEntry": true
+  },
+  "resources/css/web/contact/index.css": {
+    "file": "assets/index-DUVet1zq.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/web/contact/index.css",
+    "isEntry": true
+  },
+  "resources/css/web/creches/index.css": {
+    "file": "assets/index-DbKZeMNN.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/web/creches/index.css",
+    "isEntry": true
+  },
+  "resources/css/web/home/index.css": {
+    "file": "assets/index-B5e-uJdF.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/web/home/index.css",
+    "isEntry": true
+  },
+  "resources/css/web/legal/index.css": {
+    "file": "assets/index-C5n1skt3.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/web/legal/index.css",
+    "isEntry": true
+  },
+  "resources/css/web/pedagogy/index.css": {
+    "file": "assets/index-01U59BS3.css",
+    "name": "index",
+    "names": [
+      "index.css"
+    ],
+    "src": "resources/css/web/pedagogy/index.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DKShuzyX.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/web/contact/index.js": {
+    "file": "assets/index-FEI8ydxd.js",
+    "name": "index",
+    "src": "resources/js/web/contact/index.js",
+    "isEntry": true
+  }
+}

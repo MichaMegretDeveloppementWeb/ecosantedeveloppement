@@ -1,0 +1,1 @@
+document.addEventListener(`DOMContentLoaded`,()=>{let e=document.getElementById(`nav-toggle`),t=document.getElementById(`nav-links`);!e||!t||e.addEventListener(`click`,()=>{let n=t.classList.toggle(`mobile-open`);e.setAttribute(`aria-expanded`,String(n))})});
