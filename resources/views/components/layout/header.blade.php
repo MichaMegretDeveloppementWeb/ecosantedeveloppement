@@ -6,7 +6,7 @@
     <div class="container">
         <nav class="nav">
             <a href="{{ route('home') }}" class="nav-logo">
-                <x-illu.logo class="logo-icon" />
+                <img src="{{ asset('logo-eco-sante-developpement.png') }}" alt="" class="logo-icon" width="56" height="56">
                 <span class="nav-logo-name">{{ config('eco-sante.organization.name', 'Éco Santé Développement') }}</span>
             </a>
 

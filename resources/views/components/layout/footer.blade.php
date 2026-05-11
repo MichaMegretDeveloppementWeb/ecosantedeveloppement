@@ -11,7 +11,7 @@
             <div>
                 <div class="footer-brand">
                     <span class="footer-brand-icon">
-                        <x-illu.logo />
+                        <img src="{{ asset('logo-eco-sante-developpement.png') }}" alt="" width="48" height="48">
                     </span>
                     <strong class="footer-brand-name">{{ $org['name'] }}</strong>
                 </div>
