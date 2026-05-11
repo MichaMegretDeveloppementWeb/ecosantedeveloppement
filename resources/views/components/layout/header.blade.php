@@ -14,8 +14,7 @@
                 <a href="{{ route('home') }}" class="{{ $isActive('home') }}">Accueil</a>
                 <a href="{{ route('creches.index') }}" class="{{ $isActive('creches.index') }}">Nos crèches</a>
                 <a href="{{ route('pedagogy.index') }}" class="{{ $isActive('pedagogy.index') }}">Projet pédagogique</a>
-                <a href="{{ route('contact.index') }}" class="{{ $isActive('contact.index') }}">Contact</a>
-                <a href="{{ route('contact.index') }}" class="btn btn-primary">Inscription</a>
+                <a href="{{ route('contact.index') }}" class="btn btn-primary">Contact</a>
             </div>
 
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
