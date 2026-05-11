@@ -230,6 +230,50 @@
 .structure-card-jaune .structure-illu { background: var(--jaune-50); }
 .structure-card-bleu .structure-illu  { background: var(--bleu-50); }
 
+/* Photo de la crèche en haut de carte (à la place de l'illustration centrée).
+   Un médaillon illustration flotte en surimpression pour conserver l'âme du design. */
+.structure-photo {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.structure-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.structure-card:hover .structure-photo img {
+  transform: scale(1.04);
+}
+.structure-photo-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--surface);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.structure-card-rose  .structure-photo-badge { background: var(--rose-50); }
+.structure-card-jaune .structure-photo-badge { background: var(--jaune-50); }
+.structure-card-bleu  .structure-photo-badge { background: var(--bleu-50); }
+.structure-photo-badge .illu {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+}
+.structure-card:has(.structure-photo) .structure-body {
+  padding-top: 38px;
+}
+
 .structure-body { padding: 28px 28px 32px; }
 .structure-body h3 {
   font-size: 28px;

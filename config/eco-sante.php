@@ -67,6 +67,7 @@ return [
             'palette' => 'rose',
             'main_illu' => 'fleur',
             'satellite_illus' => ['papillon', 'coeur', 'etoile'],
+            'photo' => 'images/amel_adam_1.webp',
             'lede' => 'Notre première micro-crèche, nichée au cœur du quartier d\'Ormesson à Deuil-la-Barre. Un cocon où dix petits explorent, créent et grandissent côte à côte.',
             'features' => [
                 'Un grand espace de motricité libre lumineux',
@@ -89,6 +90,7 @@ return [
             'palette' => 'jaune',
             'main_illu' => 'soleil',
             'satellite_illus' => ['feuille', 'nuage', 'ballon'],
+            'photo' => 'images/bea_benoit_1.webp',
             'lede' => 'À deux pas du Lac Marchais, entre Deuil-la-Barre et Montmagny, notre deuxième micro-crèche profite d\'un environnement vert et calme, idéal pour les premiers pas en plein air.',
             'features' => [
                 'Un jardin d\'éveil avec carré potager',
@@ -111,6 +113,7 @@ return [
             'palette' => 'bleu',
             'main_illu' => 'papillon',
             'satellite_illus' => ['fleur', 'etoile', 'livre'],
+            'photo' => 'images/chira_hugo_1.webp',
             'lede' => 'Notre crèche savoyarde, à Bassens près de Chambéry. La plus grande des trois (12 enfants), avec un agencement pensé pour les balades en montagne et la découverte de la nature alentour.',
             'features' => [
                 'Vue dégagée sur les montagnes depuis la salle de jeu',

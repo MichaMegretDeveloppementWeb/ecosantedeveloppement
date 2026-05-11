@@ -17,9 +17,25 @@
                     $pillClass = $palette === 'rose' ? 'pill' : 'pill pill-' . $palette;
                 @endphp
                 <a href="{{ route('creches.index') }}#{{ $creche['slug'] }}" class="structure-card structure-card-{{ $palette }}">
-                    <div class="structure-illu">
-                        <x-dynamic-component :component="'illu.' . $creche['main_illu']" class="illu" />
+                    {{-- Photo de la crèche en cover + petite illustration en surimpression
+                         pour conserver l'âme illustrée du design. --}}
+                    <div class="structure-photo">
+                        <img src="{{ asset($creche['photo']) }}" alt="Vue de la micro-crèche {{ $creche['name'] }}" loading="lazy">
+                        <span class="structure-photo-badge">
+                            <x-dynamic-component :component="'illu.' . $creche['main_illu']" class="illu" />
+                        </span>
                     </div>
+
+                    {{--
+                        === VERSION PRÉCÉDENTE — illustration centrée à la place de la photo ===
+                        Pour revenir, décommenter le bloc ci-dessous et supprimer
+                        le <div class="structure-photo"> juste au-dessus.
+
+                        <div class="structure-illu">
+                            <x-dynamic-component :component="'illu.' . $creche['main_illu']" class="illu" />
+                        </div>
+                    --}}
+
                     <div class="structure-body">
                         <span class="{{ $pillClass }}">{{ $creche['department'] }} · {{ $creche['department_code'] }}</span>
                         <h3>{{ $creche['name'] }}</h3>

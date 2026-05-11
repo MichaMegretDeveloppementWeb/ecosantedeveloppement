@@ -148,6 +148,27 @@
 .structure-visual-illu { position: absolute; }
 .structure-visual-main { width: 50%; left: 25%; top: 25%; z-index: 2; }
 .structure-visual-sm { width: 80px; height: 80px; z-index: 1; }
+
+/* Photo de la crèche en blob organique (à la place de l'illustration principale).
+   Le border-radius `--radius-blob` adoucit la photo et la marie au vocabulaire
+   pastel/courbes du site. Les satellites illustrés restent au-dessus. */
+.structure-visual-photo {
+  position: absolute;
+  width: 72%;
+  height: 72%;
+  left: 14%;
+  top: 14%;
+  z-index: 2;
+  border-radius: var(--radius-blob);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.structure-visual-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .structure-visual-1 { top: 12%; right: 12%; }
 .structure-visual-2 { bottom: 16%; left: 14%; }
 .structure-visual-3 { bottom: 18%; right: 16%; width: 60px; height: 60px; }
