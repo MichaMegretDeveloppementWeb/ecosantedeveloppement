@@ -121,47 +121,32 @@
   .structure-detail-grid-rev .structure-visual { order: 0; }
 }
 
-/* VISUAL */
+/* VISUAL : conteneur transparent (pas de fond pastel, pas de blob décoratif). */
 .structure-visual {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.structure-visual-rose  { background: var(--rose-50); }
-.structure-visual-jaune { background: var(--jaune-50); }
-.structure-visual-bleu  { background: var(--bleu-50); }
-
-.structure-visual-blob {
-  position: absolute;
-  width: 70%; height: 70%;
-  border-radius: var(--radius-blob);
-  top: 15%; left: 15%;
-}
-.structure-visual-rose .structure-visual-blob  { background: var(--rose-100); }
-.structure-visual-jaune .structure-visual-blob { background: var(--jaune-100); }
-.structure-visual-bleu .structure-visual-blob  { background: var(--bleu-100); }
 
 .structure-visual-illu { position: absolute; }
 .structure-visual-main { width: 50%; left: 25%; top: 25%; z-index: 2; }
 .structure-visual-sm { width: 80px; height: 80px; z-index: 1; }
+.structure-visual-1 { top: 12%; right: 12%; }
+.structure-visual-2 { bottom: 16%; left: 14%; }
+.structure-visual-3 { bottom: 18%; right: 16%; width: 60px; height: 60px; }
 
-/* Photo de la crèche en blob organique (à la place de l'illustration principale).
-   Le border-radius `--radius-blob` adoucit la photo et la marie au vocabulaire
-   pastel/courbes du site. Les satellites illustrés restent au-dessus. */
+/* Photo de la crèche découpée selon une silhouette SVG (clipPath).
+   Chaque palette utilise une forme blob différente — voir les <clipPath>
+   définis dans `web.creches.partials.blob-defs`. */
 .structure-visual-photo {
   position: absolute;
-  width: 72%;
-  height: 72%;
-  left: 14%;
-  top: 14%;
+  width: 84%;
+  height: 84%;
+  left: 8%;
+  top: 8%;
   z-index: 2;
-  border-radius: var(--radius-blob);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 .structure-visual-photo img {
   width: 100%;
@@ -169,9 +154,10 @@
   object-fit: cover;
   display: block;
 }
-.structure-visual-1 { top: 12%; right: 12%; }
-.structure-visual-2 { bottom: 16%; left: 14%; }
-.structure-visual-3 { bottom: 18%; right: 16%; width: 60px; height: 60px; }
+
+.structure-visual-rose  .structure-visual-photo { clip-path: url(#blob-rose); }
+.structure-visual-jaune .structure-visual-photo { clip-path: url(#blob-jaune); }
+.structure-visual-bleu  .structure-visual-photo { clip-path: url(#blob-bleu); }
 
 .structure-badge {
   position: absolute;

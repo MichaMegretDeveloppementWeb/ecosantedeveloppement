@@ -5,9 +5,9 @@
 @endphp
 
 <div class="structure-visual structure-visual-{{ $palette }}">
-    <div class="structure-visual-blob"></div>
-
-    {{-- Photo de la crèche dans une forme organique (border-radius: blob). --}}
+    {{-- Photo de la crèche dans une forme organique. Le border-radius est
+         défini par palette dans le CSS pour donner à chaque crèche une
+         silhouette unique. --}}
     <div class="structure-visual-photo">
         <img src="{{ asset($creche['photo']) }}" alt="Vue de la micro-crèche {{ $creche['name'] }}" loading="lazy">
     </div>

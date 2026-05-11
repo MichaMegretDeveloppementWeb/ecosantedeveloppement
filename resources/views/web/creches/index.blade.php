@@ -53,6 +53,7 @@
 @endpush
 
 @section('content')
+    @include('web.creches.partials.blob-defs')
     @include('web.creches.partials.header')
     @include('web.creches.partials.piliers')
     @include('web.creches.partials.structures')
