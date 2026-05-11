@@ -68,6 +68,7 @@ return [
             'main_illu' => 'fleur',
             'satellite_illus' => ['papillon', 'coeur', 'etoile'],
             'photo' => 'images/amel_adam_1.webp',
+            'pmi_agreement_number' => 'Arrêté N° 2C 070 6374377 6 (Val d\'Oise)',
             'lede' => 'Notre première micro-crèche, nichée au cœur du quartier d\'Ormesson à Deuil-la-Barre. Un cocon où dix petits explorent, créent et grandissent côte à côte.',
             'features' => [
                 'Un grand espace de motricité libre lumineux',
@@ -91,6 +92,7 @@ return [
             'main_illu' => 'soleil',
             'satellite_illus' => ['feuille', 'nuage', 'ballon'],
             'photo' => 'images/bea_benoit_1.webp',
+            'pmi_agreement_number' => 'Arrêté N° 2C 113 625 1137 0 (Val d\'Oise)',
             'lede' => 'À deux pas du Lac Marchais, entre Deuil-la-Barre et Montmagny, notre deuxième micro-crèche profite d\'un environnement vert et calme, idéal pour les premiers pas en plein air.',
             'features' => [
                 'Un jardin d\'éveil avec carré potager',
@@ -114,6 +116,7 @@ return [
             'main_illu' => 'papillon',
             'satellite_illus' => ['fleur', 'etoile', 'livre'],
             'photo' => 'images/chira_hugo_1.webp',
+            'pmi_agreement_number' => 'Arrêté N° 2025-PMI-063 (Savoie)',
             'lede' => 'Notre crèche savoyarde, à Bassens près de Chambéry. La plus grande des trois (12 enfants), avec un agencement pensé pour les balades en montagne et la découverte de la nature alentour.',
             'features' => [
                 'Vue dégagée sur les montagnes depuis la salle de jeu',
@@ -146,13 +149,13 @@ return [
     |--------------------------------------------------------------------------
     | Mentions légales
     |--------------------------------------------------------------------------
-    | Les valeurs marquées TODO sont à compléter par le client.
+    | Les numéros d'agrément PMI sont définis par crèche dans la section
+    | `creches` ci-dessus (champ `pmi_agreement_number`).
     */
     'legal' => [
         'site_url' => 'ecosantedeveloppement.fr',
         'publication_director' => 'Ali CHOUKAL',
-        'siret' => 'TODO',                                   // À compléter
-        'pmi_agreement_number' => 'TODO',                                   // À compléter
+        'siret' => '797645736',
         'host' => [
             'name' => 'Hostinger',
             'address' => 'Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre',

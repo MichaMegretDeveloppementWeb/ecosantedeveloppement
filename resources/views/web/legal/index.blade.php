@@ -67,7 +67,8 @@
         @foreach ($creches as $creche)
             <li>
                 Micro-crèche <strong>{{ $creche['name'] }}</strong>,
-                {{ $creche['address'] }}, {{ $creche['postal_code'] }} {{ $creche['city'] }}
+                {{ $creche['address'] }}, {{ $creche['postal_code'] }} {{ $creche['city'] }}<br>
+                <span class="muted">Agrément PMI&nbsp;: {{ $creche['pmi_agreement_number'] }}</span>
             </li>
         @endforeach
     </ul>
@@ -75,8 +76,7 @@
         <strong>Téléphone&nbsp;:</strong> {{ $org['phone'] }}<br>
         <strong>Courriel&nbsp;:</strong> <a href="mailto:{{ $org['email'] }}">{{ $org['email'] }}</a><br>
         <strong>Directeur de la publication&nbsp;:</strong> {{ $legal['publication_director'] }}<br>
-        <strong>SIRET&nbsp;:</strong> {{ $legal['siret'] }}<br>
-        <strong>N° d'agrément PMI&nbsp;:</strong> {{ $legal['pmi_agreement_number'] }}
+        <strong>SIRET&nbsp;:</strong> {{ $legal['siret'] }}
     </p>
 
     <h2 id="hebergeur">2. Hébergement</h2>
@@ -103,8 +103,8 @@
     <h2 id="donnees">4. Données personnelles &amp; RGPD</h2>
     <p>
         Les informations recueillies via le formulaire de contact font l'objet d'un
-        traitement informatique destiné à répondre à votre demande de pré-inscription,
-        de visite ou d'information.
+        traitement informatique destiné à répondre à votre demande de pré-inscription
+        ou d'information.
     </p>
     <p>
         <strong>Responsable du traitement&nbsp;:</strong> {{ $org['name'] }}.<br>
