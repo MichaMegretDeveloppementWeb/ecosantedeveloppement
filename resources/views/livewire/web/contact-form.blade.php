@@ -3,7 +3,7 @@
         <div class="form-success" role="status">
             <x-illu.coeur class="success-icon" />
             <strong>Merci, votre message est envoyé.</strong>
-            <p>Nous vous recontactons sous 48h pour organiser une visite ou répondre à vos questions.</p>
+            <p>Nous vous recontactons sous 48h pour répondre à vos questions.</p>
         </div>
     @else
         <form class="contact-form" wire:submit="submit" novalidate>

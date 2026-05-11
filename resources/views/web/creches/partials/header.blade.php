@@ -6,11 +6,13 @@
     <div class="page-header-blob page-header-blob-1"></div>
     <div class="page-header-blob page-header-blob-2"></div>
     <div class="container">
-        <span class="eyebrow">Nos structures</span>
-        <h1>Trois maisons,<br><em class="italic-accent">une même attention</em>.</h1>
+        <span class="eyebrow">Nos micro-crèches privées</span>
+        <h1>Bienvenue dans un<br><em class="italic-accent">lieu pensé pour vos enfants</em>.</h1>
         <p class="lede">
-            Deux crèches dans le Val d'Oise, une en Savoie. Chacune avec son ambiance,
-            son équipe, son quartier, toutes liées par le même projet pédagogique.
+            Nos trois micro-crèches privées accueillent les tout-petits dans un environnement
+            chaleureux, sécurisé et adapté à leurs premiers apprentissages. Chaque structure
+            est à taille humaine afin de garantir un accompagnement individualisé, respectueux
+            du rythme et des besoins de chaque enfant.
         </p>
         <div class="quick-nav">
             @foreach ($creches as $creche)

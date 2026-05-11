@@ -34,6 +34,7 @@
     @include('web.home.partials.valeurs')
     @include('web.home.partials.journee')
     @include('web.home.partials.temoignages')
-    @include('web.home.partials.faq')
+    {{-- FAQ retirée à la demande du client. Décommenter pour réactiver. --}}
+    {{-- @include('web.home.partials.faq') --}}
     @include('web.home.partials.cta')
 @endsection

@@ -2,7 +2,7 @@
 
 @section('title', 'Nous contacter')
 @section('subtitle', config('eco-sante.organization.name'))
-@section('description', "Une question sur nos micro-crèches, une demande de visite ou de préinscription\u{00A0}? Nous vous répondons sous 48h, par téléphone, courriel ou via notre formulaire.")
+@section('description', "Une question sur nos micro-crèches ou une préinscription\u{00A0}? Nous vous répondons sous 48h, par téléphone, courriel ou via notre formulaire.")
 @section('page', 'contact')
 
 @push('assets')
@@ -15,7 +15,7 @@
             '@context' => 'https://schema.org',
             '@type' => 'ContactPage',
             'name' => 'Contact · ' . config('eco-sante.organization.name'),
-            'description' => "Une question sur nos micro-crèches, une demande de visite ou de préinscription\u{00A0}? Nous vous répondons sous 48h, par téléphone, courriel ou via notre formulaire.",
+            'description' => "Une question sur nos micro-crèches ou une préinscription\u{00A0}? Nous vous répondons sous 48h, par téléphone, courriel ou via notre formulaire.",
             'url' => route('contact.index'),
             'inLanguage' => 'fr-FR',
             'isPartOf' => ['@id' => url('/') . '#website'],

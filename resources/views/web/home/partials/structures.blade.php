@@ -6,7 +6,7 @@
     <div class="container">
         <div class="section-head">
             <span class="eyebrow">Nos structures</span>
-            <h2>Trois maisons, <em class="italic-accent">une famille</em>.</h2>
+            <h2>Trois <em class="italic-accent">lieux d'accueil</em>.</h2>
             <p class="lede">Découvrez nos trois micro-crèches, deux dans le Val d'Oise et une en Savoie.</p>
         </div>
 

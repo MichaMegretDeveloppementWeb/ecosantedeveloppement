@@ -50,9 +50,50 @@
 .section-head .lede { margin-top: 16px; }
 .section-head.text-center .lede { margin: 16px auto 0; }
 
-/* STRUCTURE DETAIL */
+/* === PILIERS (4 engagements communs) === */
+.piliers-section { background: var(--creme-100); }
+.piliers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 561px) { .piliers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 981px) { .piliers-grid { grid-template-columns: repeat(4, 1fr); } }
+.pilier {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--ink-100);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pilier:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--ink-200);
+}
+.pilier-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.pilier-icon .illu { width: 42px; height: 42px; display: inline-flex; }
+.pilier-icon-rose  { background: var(--rose-50); }
+.pilier-icon-bleu  { background: var(--bleu-50); }
+.pilier-icon-jaune { background: var(--jaune-50); }
+.pilier-icon-sauge { background: var(--sauge-50); }
+.pilier h3 { font-size: 19px; margin-bottom: 12px; line-height: 1.3; }
+.pilier p { font-size: 14.5px; color: var(--ink-700); line-height: 1.55; }
+
+/* === STRUCTURES INTRO (bandeau "Nos trois structures") === */
+.structures-intro { padding: 80px 0 16px; }
+.structures-intro .section-head { margin-bottom: 0; }
+
+/* === STRUCTURE DETAIL (3 blocs alternés) === */
 .structure-detail {
-  padding: 80px 0;
+  padding: 64px 0 80px;
   scroll-margin-top: 80px;
 }
 .structure-detail-alt { background: var(--creme-100); }
@@ -131,8 +172,8 @@
   margin-right: 4px;
 }
 
-/* INFO */
-.structure-info h2 { margin: 14px 0 20px; font-size: clamp(36px, 4vw, 48px); }
+/* INFO (simplifié : pill + nom + adresse + capacité) */
+.structure-info h2 { margin: 14px 0 24px; font-size: clamp(32px, 3.5vw, 42px); }
 
 .info-grid {
   display: grid;
@@ -144,7 +185,7 @@
 }
 .info-grid > * { min-width: 0; }
 @media (min-width: 481px) {
-  .info-grid { grid-template-columns: 1fr 1fr; }
+  .info-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 .info-label {
   display: block;
@@ -153,70 +194,23 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-500);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .info-grid strong {
   display: block;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.4;
-}
-.info-grid .info-sub {
-  font-size: 13px;
-  color: var(--ink-500);
+  color: var(--ink-900);
 }
 
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 15px;
-  color: var(--ink-700);
-}
-.feature-list .dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  margin-top: 8px;
-  flex-shrink: 0;
-}
+/* DOTS de couleur (utilisés également par le sidebar de la page Contact) */
 .dot-rose  { background: var(--rose-400); }
 .dot-jaune { background: var(--jaune-400); }
 .dot-bleu  { background: var(--bleu-400); }
 
-/* COMMUN */
-.commun-section { background: var(--rose-50); }
-.commun-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-@media (min-width: 481px) { .commun-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 881px) { .commun-grid { grid-template-columns: repeat(4, 1fr); } }
-.commun-item {
-  background: var(--surface);
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--ink-100);
-  text-align: left;
-}
-.commun-item .commun-icon { width: 48px; height: 48px; display: inline-flex; margin-bottom: 16px; }
-.commun-item strong {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 19px;
-  display: block;
-  margin-bottom: 8px;
-}
-.commun-item p { font-size: 14px; color: var(--ink-700); line-height: 1.55; }
-
+/* === CTA BAS === */
 .commun-cta {
   background: var(--surface);
   border: 1px solid var(--ink-100);
@@ -224,7 +218,16 @@
   padding: 56px 32px;
   text-align: center;
 }
+.commun-cta .eyebrow { display: inline-block; margin-bottom: 12px; }
 .commun-cta h3 {
   font-size: 28px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+.commun-cta p.muted { max-width: 520px; margin: 0 auto; }
+.commun-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
 }

@@ -10,10 +10,9 @@
                 <x-illu.coeur class="promesse-illu" />
                 <h3>Aux parents</h3>
                 <p>
-                    Un mode de garde personnalisé pour leurs jeunes enfants, qui réponde
-                    à leurs besoins de qualité, de disponibilité et de soutien à la fonction
-                    parentale. Une oreille attentive, des repères stables, une vraie
-                    relation de confiance.
+                    Un mode de garde personnalisé pour leurs jeunes enfants qui réponde
+                    à leurs besoins de qualité, de disponibilité et de soutien à la
+                    fonction parentale.
                 </p>
             </div>
             <div class="promesse promesse-bleu">
@@ -21,8 +20,8 @@
                 <h3>À l'enfant</h3>
                 <p>
                     Un cadre de vie épanouissant qui s'adapte à ses besoins spécifiques
-                    et facilite son développement optimal&nbsp;: physique, social et émotionnel.
-                    Un endroit où grandir en confiance, à son propre rythme.
+                    et facilite son développement optimal tant au niveau physique que
+                    social et émotionnel.
                 </p>
             </div>
         </div>

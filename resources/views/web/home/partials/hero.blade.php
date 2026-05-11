@@ -25,7 +25,7 @@
                     Découvrir nos crèches
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </a>
-                <a href="{{ route('contact.index') }}" class="btn btn-secondary">Demander une visite</a>
+                <a href="{{ route('contact.index') }}" class="btn btn-secondary">Nous contacter</a>
             </div>
 
             <div class="hero-stats">

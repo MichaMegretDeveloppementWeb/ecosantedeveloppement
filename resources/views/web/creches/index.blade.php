@@ -54,9 +54,10 @@
 
 @section('content')
     @include('web.creches.partials.header')
+    @include('web.creches.partials.piliers')
+    @include('web.creches.partials.structures')
     @include('web.creches.partials.detail', ['creche' => config('eco-sante.creches.amel-adam'),    'reverse' => false, 'alt' => false])
     @include('web.creches.partials.detail', ['creche' => config('eco-sante.creches.bea-benoit'),   'reverse' => true,  'alt' => true])
     @include('web.creches.partials.detail', ['creche' => config('eco-sante.creches.chiara-hugo'),  'reverse' => false, 'alt' => false])
-    @include('web.creches.partials.commun')
     @include('web.creches.partials.cta')
 @endsection
