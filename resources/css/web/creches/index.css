@@ -152,12 +152,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right;
   display: block;
 }
 
 .structure-visual-rose  .structure-visual-photo { clip-path: url(#blob-rose); }
 .structure-visual-jaune .structure-visual-photo { clip-path: url(#blob-jaune); }
 .structure-visual-bleu  .structure-visual-photo { clip-path: url(#blob-bleu); }
+
+/* Les silhouettes bleu et jaune ne remplissent pas leur bounding box autant
+   que la silhouette rose : on agrandit ces deux photos pour montrer plus
+   de l'image (le blob reste de la même forme, mais occupe plus de place). */
+.structure-visual-jaune .structure-visual-photo,
+.structure-visual-bleu  .structure-visual-photo {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 
 .structure-badge {
   position: absolute;
