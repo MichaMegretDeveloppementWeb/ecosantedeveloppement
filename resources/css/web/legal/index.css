@@ -1,7 +1,9 @@
 /* === LEGAL PAGE === */
 
 .legal-page {
-  padding: 80px 0;
+  /* padding-block uniquement : le padding horizontal vient de .container
+     (20px mobile, 32px ≥721px), à ne pas écraser. */
+  padding-block: 80px;
   max-width: 760px;
   margin: 0 auto;
 }
