@@ -7,6 +7,7 @@
 <aside class="contact-side">
     <div class="contact-card">
         <h3>Coordonnées</h3>
+        <p class="contact-owner">M. Ali CHOUKAL</p>
         <ul class="coord-list">
             <li>
                 <span class="coord-icon coord-icon-rose">

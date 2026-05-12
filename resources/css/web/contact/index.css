@@ -57,7 +57,12 @@
   font-size: 22px;
   font-family: var(--font-display);
   font-weight: 500;
-  margin-bottom: 18px;
+  margin-bottom: 6px;
+}
+.contact-owner {
+  font-size: 14.5px;
+  color: var(--ink-700);
+  margin: 0 0 18px;
 }
 .contact-card h4 {
   font-family: var(--font-display);
