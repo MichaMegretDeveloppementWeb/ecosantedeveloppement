@@ -1,26 +1,27 @@
 @php
-    // Témoignages PLACEHOLDER : à remplacer par de vrais retours parents (avec accord).
+    // Témoignages basés sur de vrais retours parents, raccourcis et anonymisés
+    // (prénoms d'enfants retirés). À étoffer si d'autres parents donnent leur accord.
     $temoignages = [
         [
             'palette' => 'rose',
-            'initials' => 'CM',
-            'quote' => "Une équipe formidable, à l'écoute, qui prend vraiment le temps. Notre fille part le matin avec le sourire, c'est le plus beau des cadeaux pour des parents.",
-            'author' => 'Camille & Marc',
-            'context' => 'Parents de Léa, 18 mois',
+            'initials' => 'M',
+            'quote' => "Il ne s'est jamais senti aussi bien dans une crèche. Une équipe formidable, bienveillante, à qui nous avons pu le confier en totale confiance \u{2014} c'est inestimable pour un parent.",
+            'author' => 'Une maman',
+            'context' => "Parents d'un petit garçon",
         ],
         [
             'palette' => 'jaune',
-            'initials' => 'SD',
-            'quote' => "Le petit effectif fait toute la différence. On nous raconte sa journée en détail, on sent que chaque enfant est connu, écouté, respecté.",
-            'author' => 'Sophie D.',
-            'context' => 'Maman de Théo, 2 ans',
+            'initials' => 'F',
+            'quote' => "Notre fille a passé deux belles années chez vous. Elle était toujours contente d'y aller, appréciait toute l'équipe, et s'y est faite de vraies copines. Merci pour votre flexibilité.",
+            'author' => 'Une famille',
+            'context' => "Deux années d'accueil",
         ],
         [
             'palette' => 'bleu',
-            'initials' => 'JR',
-            'quote' => "Les repas bio préparés sur place, l'attention portée au sommeil, les activités variées, tout est pensé. On part au travail l'esprit léger.",
-            'author' => 'Julien R.',
-            'context' => 'Papa de Anna, 14 mois',
+            'initials' => 'P',
+            'quote' => "Nous sommes vraiment satisfaits du travail accompli au quotidien. Notre enfant s'est totalement épanoui \u{2014} toute l'équipe est adorable, dans un cadre sain et équilibré.",
+            'author' => 'Des parents',
+            'context' => "Parents d'un enfant accueilli",
         ],
     ];
 @endphp
